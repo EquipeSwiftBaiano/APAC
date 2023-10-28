@@ -1,9 +1,4 @@
-//
-//  princiaplSwiftUIView.swift
-//  Apac
-//
-//  Created by Projeto nnt on 25/10/23.
-//
+
 //
 //  princiaplSwiftUIView.swift
 //  APAC V1
@@ -105,10 +100,13 @@ struct princiaplSwiftUIView: View {
                         Text("Início")
                     }
                     .tag(0)
-                    
-                    
-                    Text("Amigos")
+                    /*--------------------------------------------------------------*/
+                    NavigationView {Home() // Aqui você deve definir sua tela de Cadastro (CadastroView)
+                
+                           }
+
                         .tabItem {
+                            
                             Image(systemName: "person.2.fill")
                             Text("Amigos")
                         }
@@ -176,33 +174,33 @@ struct princiaplSwiftUIView: View {
                                    Text("Notificações")
                                }
                                .tag(2)
-                    /*--------------------------------------------------------------------------------------------*/
+                    /*---------------------------------------------------------------------------------------------*/
                     VStack{
-                                       NavigationView {
-                                                  List(emergencyContacts) { contact in
-                                                      HStack {
-                                                          Text(contact.name)
-                                                          Spacer()
-                                                          Text(contact.phoneNumber)
-                                                              .foregroundColor(.blue)
-                                                              .onTapGesture {
-                                                                  // Adicione código para chamar o número de telefone ao tocar
-                                                                  if let phoneURL = URL(string: "tel://\(contact.phoneNumber)") {
-                                                                      UIApplication.shared.open(phoneURL)
-                                                                  }
-                                                              }
-                                                      }
-                                                  }
-                                                  .navigationTitle("Contatos de Emergência")
-                                              }
-                                           
-                                          }
-                                       .tabItem {
-                                               Image(systemName: "phone.fill")
-                                               Text("Chamadas")
+                    NavigationView {
+                               List(emergencyContacts) { contact in
+                                   HStack {
+                                       Text(contact.name)
+                                       Spacer()
+                                       Text(contact.phoneNumber)
+                                           .foregroundColor(.blue)
+                                           .onTapGesture {
+                                               // Adicione código para chamar o número de telefone ao tocar
+                                               if let phoneURL = URL(string: "tel://\(contact.phoneNumber)") {
+                                                   UIApplication.shared.open(phoneURL)
+                                               }
                                            }
-                                           .tag(3)
-                    /*--------------------------------------------------------*/
+                                   }
+                               }
+                               .navigationTitle("Contatos de Emergência")
+                           }
+                        
+                       }
+                    .tabItem {
+                            Image(systemName: "phone.fill")
+                            Text("Chamadas")
+                        }
+                        .tag(3)
+                    /*---------------------------------------------------------*/
             
                     VStack {
                         Image("profile_image_placeholder") // Substitua "profile_image_placeholder" pela imagem de perfil do usuário

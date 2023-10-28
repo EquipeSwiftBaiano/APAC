@@ -8,7 +8,7 @@ struct EditProfileView: View {
 
     var body: some View {
         VStack {
-          Spacer()
+
 
             TextField("Nome", text: $editedName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
