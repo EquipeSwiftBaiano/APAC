@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7368BD2AF065130024C8AF /* ligacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7368BC2AF065130024C8AF /* ligacoes.swift */; };
+		CE7368C12AF067DE0024C8AF /* alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7368C02AF067DE0024C8AF /* alerta.swift */; };
 		CEDA8FC92AE1E22B005EA694 /* ApacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA8FC82AE1E22B005EA694 /* ApacApp.swift */; };
 		CEDA8FCB2AE1E22B005EA694 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA8FCA2AE1E22B005EA694 /* ContentView.swift */; };
 		CEDA8FCD2AE1E22C005EA694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA8FCC2AE1E22C005EA694 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7368BC2AF065130024C8AF /* ligacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ligacoes.swift; sourceTree = "<group>"; };
+		CE7368C02AF067DE0024C8AF /* alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alerta.swift; sourceTree = "<group>"; };
 		CEDA8FC52AE1E22B005EA694 /* APAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA8FC82AE1E22B005EA694 /* ApacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApacApp.swift; sourceTree = "<group>"; };
 		CEDA8FCA2AE1E22B005EA694 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +54,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7368BE2AF067440024C8AF /* telas */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA8FDC2AE72E3B005EA694 /* home.swift */,
+				CE7368BC2AF065130024C8AF /* ligacoes.swift */,
+				CEDA8FDE2AE7417E005EA694 /* FriendsSearchView.swift */,
+				CEDA8FE22AEB2F4A005EA694 /* Teladeperfil.swift */,
+				CE7368BF2AF067720024C8AF /* subtelas */,
+			);
+			path = telas;
+			sourceTree = "<group>";
+		};
+		CE7368BF2AF067720024C8AF /* subtelas */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA8FCA2AE1E22B005EA694 /* ContentView.swift */,
+				CEDA8FD82AE36BB3005EA694 /* cadastro.swift */,
+				CEDA8FE02AE74256005EA694 /* SearchPeopleView.swift */,
+				CEDA8FDA2AE72CC3005EA694 /* EditProfileView.swift */,
+			);
+			path = subtelas;
+			sourceTree = "<group>";
+		};
 		CEDA8FBC2AE1E22B005EA694 = {
 			isa = PBXGroup;
 			children = (
@@ -69,19 +96,14 @@
 		CEDA8FC72AE1E22B005EA694 /* APAC */ = {
 			isa = PBXGroup;
 			children = (
-				CEDA8FCA2AE1E22B005EA694 /* ContentView.swift */,
-				CEDA8FD82AE36BB3005EA694 /* cadastro.swift */,
 				CEDA8FD62AE34B1A005EA694 /* princiaplSwiftUIView.swift */,
-				CEDA8FDC2AE72E3B005EA694 /* home.swift */,
-				CEDA8FDE2AE7417E005EA694 /* FriendsSearchView.swift */,
-				CEDA8FE02AE74256005EA694 /* SearchPeopleView.swift */,
-				CEDA8FDA2AE72CC3005EA694 /* EditProfileView.swift */,
-				CEDA8FE22AEB2F4A005EA694 /* Teladeperfil.swift */,
+				CE7368BE2AF067440024C8AF /* telas */,
 				CEDA8FE62AEC7216005EA694 /* Imagem1.png */,
 				CEDA8FE82AEC7252005EA694 /* GoogleService-Info.plist */,
 				CEDA8FCC2AE1E22C005EA694 /* Assets.xcassets */,
 				CEDA8FC82AE1E22B005EA694 /* ApacApp.swift */,
 				CEDA8FCE2AE1E22C005EA694 /* Preview Content */,
+				CE7368C02AF067DE0024C8AF /* alerta.swift */,
 			);
 			path = APAC;
 			sourceTree = "<group>";
@@ -169,12 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7368BD2AF065130024C8AF /* ligacoes.swift in Sources */,
 				CEDA8FDD2AE72E3B005EA694 /* home.swift in Sources */,
 				CEDA8FDB2AE72CC3005EA694 /* EditProfileView.swift in Sources */,
 				CEDA8FE32AEB2F4A005EA694 /* Teladeperfil.swift in Sources */,
 				CEDA8FCB2AE1E22B005EA694 /* ContentView.swift in Sources */,
 				CEDA8FD72AE34B1A005EA694 /* princiaplSwiftUIView.swift in Sources */,
 				CEDA8FD92AE36BB3005EA694 /* cadastro.swift in Sources */,
+				CE7368C12AF067DE0024C8AF /* alerta.swift in Sources */,
 				CEDA8FC92AE1E22B005EA694 /* ApacApp.swift in Sources */,
 				CEDA8FDF2AE7417E005EA694 /* FriendsSearchView.swift in Sources */,
 				CEDA8FE12AE74256005EA694 /* SearchPeopleView.swift in Sources */,

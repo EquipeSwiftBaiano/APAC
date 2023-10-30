@@ -66,43 +66,19 @@ struct princiaplSwiftUIView: View {
                 
                 
                 TabView(selection: $selectedTab) {
-                    VStack {
-                        
-                        Image(systemName: "sun.max.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 100, height: 100)
-                            .foregroundColor(.yellow)
-                            .padding()
-                        
-                 
-                        NavigationSplitView {
-                            Text("APAC")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .padding()
-                        
-                        ForEach(weatherData, id: \.day) { weather in
-                            HStack {
-                                Text(weather.day)
-                                    .font(.headline)
-                                Spacer()
-                                Text(weather.condition)
-                                    .font(.subheadline)
-                            }
-                            .padding()
-                        }
-                    } detail: {
-                        /*@START_MENU_TOKEN@*/Text("Detail")/*@END_MENU_TOKEN@*/
-                    }                    }
+                    NavigationView {Home() // Aqui você deve definir sua tela de Cadastro (CadastroView)
+                
+                           }
+                    
+                                   
                     .tabItem {
                         Image(systemName: "house")
                         Text("Início")
                     }
                     .tag(0)
                     /*--------------------------------------------------------------*/
-                    NavigationView {Home() // Aqui você deve definir sua tela de Cadastro (CadastroView)
-                
+                    NavigationView {FriendsSearchView() // Aqui você deve definir sua tela de Cadastro (CadastroView)
+                            .navigationTitle("Procurar")
                            }
 
                         .tabItem {
@@ -175,26 +151,10 @@ struct princiaplSwiftUIView: View {
                                }
                                .tag(2)
                     /*---------------------------------------------------------------------------------------------*/
-                    VStack{
-                    NavigationView {
-                               List(emergencyContacts) { contact in
-                                   HStack {
-                                       Text(contact.name)
-                                       Spacer()
-                                       Text(contact.phoneNumber)
-                                           .foregroundColor(.blue)
-                                           .onTapGesture {
-                                               // Adicione código para chamar o número de telefone ao tocar
-                                               if let phoneURL = URL(string: "tel://\(contact.phoneNumber)") {
-                                                   UIApplication.shared.open(phoneURL)
-                                               }
-                                           }
-                                   }
-                               }
-                               .navigationTitle("Contatos de Emergência")
+                    NavigationView {ligacoes()
+                            .navigationTitle("Contatos de Emergência")
+                
                            }
-                        
-                       }
                     .tabItem {
                             Image(systemName: "phone.fill")
                             Text("Chamadas")
@@ -202,48 +162,11 @@ struct princiaplSwiftUIView: View {
                         .tag(3)
                     /*---------------------------------------------------------*/
             
-                    VStack {
-                        Image("profile_image_placeholder") // Substitua "profile_image_placeholder" pela imagem de perfil do usuário
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 150, height: 150)
-                            .clipShape(Circle())
-                            .padding()
-                        
-                        Text("Nome do Usuário") // Substitua pelo nome do usuário
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        Text("Endereço de Email") // Substitua pelo email do usuário
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .padding()
-                        
-                        
-                        Text("Informações do Perfil")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .padding()
-                        
-                        Text("Idade: 30 anos") // Substitua pela idade do usuário
-                            .font(.headline)
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                        
-                        Text("Localização: Cidade, País") // Substitua pela localização do usuário
-                            .font(.headline)
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                        
-                 
-                        
-                        NavigationLink("Editar Perfil", destination: EditProfileView()) // Substitua "EditProfileView" pela visualização de edição de perfil
-                            .foregroundColor(.white)
-                            .frame(width: 300, height: 50)
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .padding(.top, -10)
-                    }
+                    NavigationView {TeladePerfil()
+                            .navigationTitle("Perfil")
+                
+                           }
+
                     .tabItem {
                         Image(systemName: "person.fill") // Você pode escolher um ícone apropriado
                         Text("Perfil")

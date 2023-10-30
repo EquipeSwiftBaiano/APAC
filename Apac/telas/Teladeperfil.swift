@@ -43,10 +43,12 @@ struct TeladePerfil: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
                         .foregroundColor(.white)
+                      
                 }
                 .padding()
+             
             }
-            .navigationTitle("Perfil")
+            
         }
     }
 }

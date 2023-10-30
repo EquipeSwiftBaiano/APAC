@@ -45,16 +45,17 @@ struct Home: View {
                                 Text(weather.condition)
                                     .font(.subheadline)
                             }
-                            .frame(width: 50, height: 100)
+                            .frame(width: 47, height: 100)
                         }
                     }
-                    .frame(height: 250)
+                    .frame(height: 130)
                 }
                 .background(
                     LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom)
                     
                     
                 )
+              
             }
         }
     }

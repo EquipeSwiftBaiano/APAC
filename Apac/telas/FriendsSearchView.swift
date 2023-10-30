@@ -31,7 +31,7 @@ struct FriendsSearchView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Procurar")
+            
         }
     }
 }
