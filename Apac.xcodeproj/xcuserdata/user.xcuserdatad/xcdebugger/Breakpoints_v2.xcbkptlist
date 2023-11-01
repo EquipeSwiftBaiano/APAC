@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B97780F7-5515-4AEE-92C0-9FE30E5207EF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apac/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AuthenticationManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - 7051a16c99cb7539"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of apac.AuthenticationManager._isAuthenticated : Swift.Bool"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - c38d4b445473b8e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager._isAuthenticated.getter : Swift.Bool"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - d11626cc93a650e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager._isAuthenticated.setter : Swift.Bool"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - 47c2b53774d352eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager._isAuthenticated.modify : Swift.Bool"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - f8c99a89a8d495e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager._isAuthenticated.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - eac403355b828a8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager.$_isAuthenticated.getter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - cd25d91b6230c699"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager.$_isAuthenticated.setter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - 8b03d54a4e8f936"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager.$_isAuthenticated.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "5B10DD44-0DF0-406E-BF46-84ED3FC14DBF - b837b80aa2311d80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apac.AuthenticationManager.$_isAuthenticated.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "apac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Dev/apac/apac/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4723CA75-1CA2-4F7D-897D-D499BCB9E1E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apac/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "login()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "466EF964-7C00-4955-A7F2-670489788CC7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apac/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "login()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
