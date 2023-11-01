@@ -17,33 +17,15 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                CardDicas()
+                Dicas()
                 
                 Spacer()
                 
                 Indices()
                 
-                /*ScrollView(.horizontal) {
-                    LazyHGrid(rows: [GridItem(.flexible())]) {
-                        CardIndice()
-                        CardIndice()
-                        CardIndice()
-                    }
-                }*/
-                
                 Spacer()
                 
-                ScrollView(.horizontal) {
-                    LazyHGrid(rows: [GridItem(.flexible())], spacing: 15) {
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                        CardTemperaturaPrevisao()
-                    }
-                }
+                PrevisaoTemperatura()
                 
             }
             .frame(maxWidth: .infinity)

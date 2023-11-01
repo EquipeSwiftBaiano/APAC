@@ -18,6 +18,8 @@
 		CEA6C1B12AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B02AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift */; };
 		CEA6C1B32AF1D73000BF0AA0 /* CardDicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B22AF1D73000BF0AA0 /* CardDicas.swift */; };
 		CEA6C1B52AF1F0AA00BF0AA0 /* Indices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B42AF1F0AA00BF0AA0 /* Indices.swift */; };
+		CEA6C1B72AF283D500BF0AA0 /* Dicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B62AF283D500BF0AA0 /* Dicas.swift */; };
+		CEA6C1BA2AF284FC00BF0AA0 /* PrevisaoTemperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B92AF284FC00BF0AA0 /* PrevisaoTemperatura.swift */; };
 		CEF3ED7E2AEF107D006E1F03 /* ApacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */; };
 		CEF3ED802AEF107D006E1F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */; };
 		CEF3ED822AEF107E006E1F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3ED812AEF107E006E1F03 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		CEA6C1B02AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemperaturaPrevisao.swift; sourceTree = "<group>"; };
 		CEA6C1B22AF1D73000BF0AA0 /* CardDicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDicas.swift; sourceTree = "<group>"; };
 		CEA6C1B42AF1F0AA00BF0AA0 /* Indices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indices.swift; sourceTree = "<group>"; };
+		CEA6C1B62AF283D500BF0AA0 /* Dicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dicas.swift; sourceTree = "<group>"; };
+		CEA6C1B92AF284FC00BF0AA0 /* PrevisaoTemperatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevisaoTemperatura.swift; sourceTree = "<group>"; };
 		CEF3ED7A2AEF107D006E1F03 /* apac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApacApp.swift; sourceTree = "<group>"; };
 		CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,17 @@
 				CE070D482AF09A9B007AEF88 /* EscolherAlertarView.swift */,
 			);
 			path = EscolherAlertar;
+			sourceTree = "<group>";
+		};
+		CEA6C1B82AF284C700BF0AA0 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6C1AC2AF1A9B300BF0AA0 /* CardTemperatura.swift */,
+				CEA6C1AE2AF1ABF200BF0AA0 /* CardIndice.swift */,
+				CEA6C1B02AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift */,
+				CEA6C1B22AF1D73000BF0AA0 /* CardDicas.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		CEF3ED712AEF107D006E1F03 = {
@@ -185,13 +200,12 @@
 		CEF3ED8E2AEF1112006E1F03 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6C1B82AF284C700BF0AA0 /* Cards */,
 				CEF3EDA02AEF17B0006E1F03 /* HomeView.swift */,
 				CEF3EDA22AEF17D1006E1F03 /* HomeViewModel.swift */,
-				CEA6C1AC2AF1A9B300BF0AA0 /* CardTemperatura.swift */,
-				CEA6C1AE2AF1ABF200BF0AA0 /* CardIndice.swift */,
-				CEA6C1B02AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift */,
-				CEA6C1B22AF1D73000BF0AA0 /* CardDicas.swift */,
 				CEA6C1B42AF1F0AA00BF0AA0 /* Indices.swift */,
+				CEA6C1B62AF283D500BF0AA0 /* Dicas.swift */,
+				CEA6C1B92AF284FC00BF0AA0 /* PrevisaoTemperatura.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -328,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF3ED912AEF12A5006E1F03 /* AuthenticationManager.swift in Sources */,
+				CEA6C1BA2AF284FC00BF0AA0 /* PrevisaoTemperatura.swift in Sources */,
 				CEA6C1A92AF19A1E00BF0AA0 /* CadastroListRow.swift in Sources */,
 				CEF3EDA32AEF17D1006E1F03 /* HomeViewModel.swift in Sources */,
 				CEF3ED9D2AEF1781006E1F03 /* CadastroView.swift in Sources */,
@@ -337,6 +352,7 @@
 				CE070D432AF07A2B007AEF88 /* TabsEnum.swift in Sources */,
 				CEF3ED942AEF12E0006E1F03 /* AuthenticationProtocol.swift in Sources */,
 				CEF3EDA62AEF1CE7006E1F03 /* ConexoesView.swift in Sources */,
+				CEA6C1B72AF283D500BF0AA0 /* Dicas.swift in Sources */,
 				CEA6C1AF2AF1ABF200BF0AA0 /* CardIndice.swift in Sources */,
 				CEA6C1B52AF1F0AA00BF0AA0 /* Indices.swift in Sources */,
 				CEA6C1B12AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift in Sources */,
