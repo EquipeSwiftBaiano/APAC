@@ -13,8 +13,7 @@ struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var wrongUsername: Float = 0
-    @State private var wrongPassword: Float = 0
-
+    @State private var wrongPassword: Float = 0    
     
     var body: some View {
         NavigationStack {
@@ -37,8 +36,14 @@ struct LoginView: View {
                     Text("Com o e-mail e senha para entra")
                     
                     TextInputField(placeHolder: "Usuario", value: $username)
+                        .frame(height: 52)
+                        .background(Color(uiColor: .tertiarySystemBackground))
+                        .cornerRadiusWithBorder(radius: 12, borderLineWidth: 1, borderColor: .gray)
+                        .disabled(true)
                     
                     SecureInputField(placeHolder: "Senha", value: $password)
+                        .background(Color(uiColor: .tertiarySystemBackground))
+                        .cornerRadiusWithBorder(radius: 12, borderLineWidth: 1, borderColor: .gray)
                     
                     HStack {
                         Spacer()

@@ -9,16 +9,14 @@ import SwiftUI
 
 struct PrevisaoTemperatura: View {
     var body: some View {
-        ScrollView(.horizontal) {
+        ZStack {
             GeometryReader { geometry in
-                
-                LazyHGrid(rows: [GridItem(.flexible())], spacing: 15) {
-                    CardTemperaturaPrevisao(geometry: geometry)
-                    CardTemperaturaPrevisao(geometry: geometry)
-                    CardTemperaturaPrevisao(geometry: geometry)
-                    CardTemperaturaPrevisao(geometry: geometry)
-                    CardTemperaturaPrevisao(geometry: geometry)
-                    CardTemperaturaPrevisao(geometry: geometry)
+                ScrollView(.horizontal) {
+                    LazyHGrid(rows: [GridItem(.flexible())], spacing: 15) {
+                        ForEach(1..<20) { _ in
+                            CardTemperaturaPrevisao(geometry: geometry)
+                        }
+                    }
                 }
             }
         }

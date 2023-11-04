@@ -40,32 +40,6 @@ struct CardTemperaturaPrevisao: View {
         .padding(.vertical, 10)
         .background(Color(uiColor: .tertiarySystemBackground))
         .cornerRadius(20)
-        
-        /*VStack {
-                Text("Day")
-                    .textCase(.uppercase)
-                    .font(.system(size: 14))
-                    .foregroundColor(Color(uiColor: .secondaryLabel))
-                
-                Spacer()
-                
-                Image(systemName: "sun.min.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 32, height: 32)
-                
-                Spacer()
-                
-                Text("27")
-                    .font(.system(size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(uiColor: .label))
-            }
-            .frame(height: 120)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 20)
-            .background(Color(uiColor: .tertiarySystemBackground))
-            .cornerRadius(20)*/
     }
 }
 

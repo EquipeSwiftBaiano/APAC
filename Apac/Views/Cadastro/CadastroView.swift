@@ -30,31 +30,41 @@ struct CadastroView: View {
             }
             .padding(.top)
             Spacer()
+            
             List {
+                Section(header: Text("Dados de Acesso")) {
+                    
+                    CadastroListRow(label: "Usuario", value: $nome)
+                    
+                    CadastroListRow(label: "Senha", value: $email, isPassword: true)
+                    
+                    CadastroListRow(label: "Confirmar Senha", value: $numero, isPassword: true)
+                }
+                
                 Section(header: Text("Dados Pessoais")) {
                     
-                    CadastroListRow(value: $nome, label: "Nome")
+                    CadastroListRow(label: "Nome", value: $nome)
                     
-                    CadastroListRow(value: $email, label: "Email")
+                    CadastroListRow(label: "Email", value: $email)
                     
-                    CadastroListRow(value: $numero, label: "Numero")
+                    CadastroListRow(label: "Numero", value: $numero)
                 }
+                
                 Section(header: Text("Endereço")) {
                     
-                    CadastroListRow(value: $email, label: "Endereço")
+                    CadastroListRow(label: "Endereço", value: $email)
                     
-                    CadastroListRow(value: $email, label: "Bairro")
+                    CadastroListRow(label: "Bairro", value: $email)
                     
-                    CadastroListRow(value: $email, label: "CEP")
+                    CadastroListRow(label: "CEP", value: $email)
                     
-                    CadastroListRow(value: $email, label: "Cidade")
+                    CadastroListRow(label: "Cidade", value: $email)
                     
-                    CadastroListRow(value: $email, label: "Estado")
+                    CadastroListRow(label: "Estado", value: $email)
                 }
             }
             .background(Color(uiColor: .secondarySystemBackground))
             .scrollContentBackground(.hidden)
-            .scrollDisabled(true)
             
             Spacer()
             
