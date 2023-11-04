@@ -13,6 +13,8 @@ struct EscolherAlertarView: View {
     
     @State private var selectedUserIDs: Set<UUID> = []
     
+    @Binding var isSheetPresented: Bool
+    
     
     var body: some View {
         NavigationView {
@@ -42,7 +44,9 @@ struct EscolherAlertarView: View {
                 
                 Spacer()
                 
-                Button("Cadastrar") {
+                Button("Alertar") {
+                    isSheetPresented.toggle()
+                    
                     print(self.selectedUserIDs)
                 }
                 .foregroundColor(.red)
@@ -68,15 +72,17 @@ struct EscolherAlertarView_Previews: PreviewProvider {
     
     static let authenticationManager = AuthenticationManager()
     
+    @State static var isModalPresented = false
+    
     static var previews: some View {
         Group {
-            EscolherAlertarView().environmentObject({ () -> AuthenticationManager in
+            EscolherAlertarView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
                 envObj.login()
                 return envObj
             }())
             
-            EscolherAlertarView().environmentObject({ () -> AuthenticationManager in
+            EscolherAlertarView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
                 envObj.login()
                 return envObj

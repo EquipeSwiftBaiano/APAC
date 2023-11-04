@@ -1,5 +1,5 @@
 //
-//  PrincipalView.swift
+//  TabNavigationView.swift
 //  apac
 //
 //  Created by user on 30/10/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PrincipalView: View {
+struct TabNavigationView: View {
     
     @State private var selectedTab: TabsEnum = .home
     
@@ -18,27 +18,27 @@ struct PrincipalView: View {
     @State private var isModalPresented = false
     
     @State private var showAlert = false
-    	
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            PrincipalTabItem(label: "Inicio", systemImage: "house", tag: .home, content: {
+            NavigationItem(label: "Inicio", systemImage: "house", tag: .home, content: {
                 HomeView()
             })
             
-            PrincipalTabItem(label: "Conexões", systemImage: "person.line.dotted.person", tag: .conexoes, content: {
+            NavigationItem(label: "Conexões", systemImage: "person.3", tag: .conexoes, content: {
                 ConexoesView()
             })
             
-            PrincipalTabItem(label: "Alerta", systemImage: "bell.and.waveform.fill", tag: .alerta, content: {
+            NavigationItem(label: "Alerta", systemImage: "bell.and.waveform.fill", tag: .alerta, content: {
                 Text("")
             })
             
-            PrincipalTabItem(label: "Telefones Úteis", systemImage: "teletype.answer.circle", tag: .telefonesUteis, content: {
+            NavigationItem(label: "Telefones Úteis", systemImage: "teletype.answer.circle", tag: .telefonesUteis, content: {
                 TelefonesUteisView()
             })
             
-            PrincipalTabItem(label: "Perfil", systemImage: "person.crop.circle", tag: .perfil, content: {
+            NavigationItem(label: "Perfil", systemImage: "person.crop.circle", tag: .perfil, content: {
                 PerfilView()
             })
         }
@@ -74,23 +74,31 @@ struct PrincipalView: View {
             ])
         }
         
-        .sheet(isPresented: $isModalPresented, content: {
-            EscolherAlertarView(isSheetPresented: $isModalPresented)
-                .onDisappear {
-                    showAlert.toggle()
-                    print("A view deixou de estar visível")
-                }
-        })
+        .sheet(isPresented: $isModalPresented, content: { EscolherAlertarView() })
         
     }
 }
 
+struct NavigationItem<Content: View>: View {
+    var label: String
+    var systemImage: String
+    var tag: TabsEnum
+    var content: () -> Content
+    
+    var body: some View {
+        content()
+            .tabItem {
+                Label(label, systemImage: systemImage)
+            }
+            .tag(tag)
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(.white, for: .tabBar)
+    }
+}
+
+
 struct TabNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        Group {
-            PrincipalView()
-            PrincipalView().preferredColorScheme(.dark)
-        }
+        TabNavigationView()
     }
 }

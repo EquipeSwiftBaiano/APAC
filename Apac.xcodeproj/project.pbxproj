@@ -10,6 +10,8 @@
 		CE070D432AF07A2B007AEF88 /* TabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D422AF07A2B007AEF88 /* TabsEnum.swift */; };
 		CE070D462AF08E6E007AEF88 /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D452AF08E6E007AEF88 /* PrincipalView.swift */; };
 		CE070D492AF09A9B007AEF88 /* EscolherAlertarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D482AF09A9B007AEF88 /* EscolherAlertarView.swift */; };
+		CE070D4B2AF479FB007AEF88 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D4A2AF479FB007AEF88 /* ProfileView.swift */; };
+		CE070D4D2AF56672007AEF88 /* ConexoesListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */; };
 		CEA6C1A72AF15FAB00BF0AA0 /* TelefoneUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1A62AF15FAB00BF0AA0 /* TelefoneUtil.swift */; };
 		CEA6C1A92AF19A1E00BF0AA0 /* CadastroListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1A82AF19A1E00BF0AA0 /* CadastroListRow.swift */; };
 		CEA6C1AB2AF19CD300BF0AA0 /* PrincipalTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1AA2AF19CD300BF0AA0 /* PrincipalTabItem.swift */; };
@@ -46,6 +48,8 @@
 		CE070D422AF07A2B007AEF88 /* TabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsEnum.swift; sourceTree = "<group>"; };
 		CE070D452AF08E6E007AEF88 /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
 		CE070D482AF09A9B007AEF88 /* EscolherAlertarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherAlertarView.swift; sourceTree = "<group>"; };
+		CE070D4A2AF479FB007AEF88 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConexoesListRow.swift; sourceTree = "<group>"; };
 		CEA6C1A62AF15FAB00BF0AA0 /* TelefoneUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefoneUtil.swift; sourceTree = "<group>"; };
 		CEA6C1A82AF19A1E00BF0AA0 /* CadastroListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroListRow.swift; sourceTree = "<group>"; };
 		CEA6C1AA2AF19CD300BF0AA0 /* PrincipalTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabItem.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				CEF3ED8C2AEF10DD006E1F03 /* Managers */,
 				CEF3ED8B2AEF10D2006E1F03 /* Views */,
 				CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */,
+				CE070D4A2AF479FB007AEF88 /* ProfileView.swift */,
 				CEF3ED812AEF107E006E1F03 /* Assets.xcassets */,
 				CEF3ED832AEF107E006E1F03 /* Preview Content */,
 			);
@@ -245,6 +250,7 @@
 			children = (
 				CEF3EDA52AEF1CE7006E1F03 /* ConexoesView.swift */,
 				CEF3EDA72AEF1D06006E1F03 /* ConexoesViewModel.swift */,
+				CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */,
 			);
 			path = Conexoes;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				CEA6C1B12AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift in Sources */,
 				CEF3EDA12AEF17B0006E1F03 /* HomeView.swift in Sources */,
 				CEA6C1BC2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift in Sources */,
+				CE070D4D2AF56672007AEF88 /* ConexoesListRow.swift in Sources */,
 				CEF3EDAE2AEF1D5C006E1F03 /* PerfilView.swift in Sources */,
 				CEF3EDB32AEF3C11006E1F03 /* TextInputField.swift in Sources */,
 				CEF3EDB52AEF4380006E1F03 /* SecureInputField.swift in Sources */,
@@ -368,6 +375,7 @@
 				CEA6C1AB2AF19CD300BF0AA0 /* PrincipalTabItem.swift in Sources */,
 				CEF3ED802AEF107D006E1F03 /* ContentView.swift in Sources */,
 				CEF3EDAB2AEF1D2F006E1F03 /* TelefonesUteisView.swift in Sources */,
+				CE070D4B2AF479FB007AEF88 /* ProfileView.swift in Sources */,
 				CE070D492AF09A9B007AEF88 /* EscolherAlertarView.swift in Sources */,
 				CEF3ED962AEF16E5006E1F03 /* LoginView.swift in Sources */,
 				CEA6C1B32AF1D73000BF0AA0 /* CardDicas.swift in Sources */,
