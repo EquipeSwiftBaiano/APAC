@@ -21,9 +21,13 @@ struct ConexoesView: View {
     
     var body: some View {
         
+        let parentes = authenticationManager.user.parentes
+        
+        let vizinhos = authenticationManager.user.vizinhos
+        
         NavigationView {
             List {
-                if let parentes = authenticationManager.user?.parentes, !parentes.isEmpty {
+                if !parentes.isEmpty {
                     Section(header: Text("Parentes")) {
                         ForEach(parentes) { parente in
                             ConexoesListRow(usuario: parente)
@@ -31,7 +35,7 @@ struct ConexoesView: View {
                     }
                 }
                 
-                if let vizinhos = authenticationManager.user?.vizinhos, !vizinhos.isEmpty {
+                if !vizinhos.isEmpty {
                     Section(header: Text("Vizinhos")) {
                         ForEach(vizinhos) { vizinho in
                             ConexoesListRow(usuario: vizinho)

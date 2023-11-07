@@ -25,7 +25,7 @@ struct EscolherAlertaListRow: View {
                 .font(.system(size: 16))
                 .foregroundColor(Color(uiColor: .label))
         }
-        .listRowBackground(isSelected ? Color(uiColor: .secondarySystemBackground) : Color(uiColor: .tertiarySystemBackground))
+        .listRowBackground(isSelected ? Color(uiColor: .tertiarySystemBackground) : Color(uiColor: .secondarySystemBackground))
     }
 }
 

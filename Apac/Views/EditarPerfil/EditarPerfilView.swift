@@ -1,74 +1,120 @@
-import SwiftUI
+//
+//  EditarPerfilView.swift
+//  apac
+//
+//  Created by user on 06/11/23.
+//
 
-struct EditarPerfilListRow2: View {
-    @Binding var value: String
-    let label: String
-    
-    var body: some View {
-        HStack {
-            Text(label)
-            Spacer()
-            TextField("", text: $value)
-        }
-    }
-}
+import SwiftUI
 
 struct EditarPerfilView: View {
     
-    @State private var nome = "Seu Nome"
-    @State private var email = "seu@email.com"
-    @State private var numero = "Seu Número"
+    @EnvironmentObject var authenticationManager: AuthenticationManager
+    
+    @State private var nome = ""
+    
+    @State private var email = ""
+    
+    @State private var numero = ""
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack(alignment: .center, spacing: 18) {
-                Image(systemName: "person.crop.circle.fill")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .aspectRatio(contentMode: .fit)
-                
-                Text("Foto do Perfil")
-            }
-            .padding(.top)
-            Spacer()
-            List {
-                Section(header: Text("Informações Pessoais")) {
-                    EditarPerfilListRow2(value: $nome, label: "Nome")
-                    EditarPerfilListRow2(value: $email, label: "Email")
-                    EditarPerfilListRow2(value: $numero, label: "Número")
-                }
-                Section(header: Text("Endereço")) {
-                    EditarPerfilListRow2(value: $email, label: "Endereço")
-                    EditarPerfilListRow2(value: $email, label: "Bairro")
-                    EditarPerfilListRow2(value: $email, label: "CEP")
-                    EditarPerfilListRow2(value: $email, label: "Cidade")
-                    EditarPerfilListRow2(value: $email, label: "Estado")
-                }
-            }
-            .background(Color(uiColor: .secondarySystemBackground))
-            .scrollContentBackground(.hidden)
-            .scrollDisabled(true)
-            Spacer()
-        }
         
-        .background(Color(uiColor: .secondarySystemBackground))
-        .navigationTitle("Editar Perfil")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.visible, for: .navigationBar)
-        .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            NavigationView {
+                
+                VStack {
+                    Spacer()
+                    VStack(alignment: .center, spacing: 18){
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .frame(width: 120, height: 120)
+                            .aspectRatio(contentMode: .fit)
+                        
+                        Text("Adicionar Foto")
+                    }
+                    .padding(.top)
+                    
+                    Spacer()
+                    
+                    List {
+                        Section(header: Text("Dados de Acesso")) {
+                            
+                            EditarPerfilListRow(label: "Usuario", value: $nome)
+                                .disabled(true)
+                            
+                            EditarPerfilListRow(label: "Senha", value: $email, isPassword: true)
+                            
+                            EditarPerfilListRow(label: "Confirmar Senha", value: $numero, isPassword: true)
+                        }
+                        
+                        Section(header: Text("Dados Pessoais")) {
+                            
+                            EditarPerfilListRow(label: "Nome", value: $nome)
+                            
+                            EditarPerfilListRow(label: "Email", value: $email)
+                            
+                            EditarPerfilListRow(label: "Numero", value: $numero)
+                        }
+                        
+                        Section(header: Text("Endereço")) {
+                            
+                            EditarPerfilListRow(label: "Endereço", value: $email)
+                            
+                            EditarPerfilListRow(label: "Bairro", value: $email)
+                            
+                            EditarPerfilListRow(label: "CEP", value: $email)
+                            
+                            EditarPerfilListRow(label: "Cidade", value: $email)
+                            
+                            EditarPerfilListRow(label: "Estado", value: $email)
+                        }
+                    }
+                    .background(Color(uiColor: .secondarySystemBackground))
+                    .scrollContentBackground(.hidden)
+                    
+                    Spacer()
+                    
+                    Button("Salvar") {
+                        print("Salvar informacoes")
+                    }
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 18)
+                    
+                    Spacer()
+                }
+                .background(Color(uiColor: .secondarySystemBackground))
+                
+                
+                .navigationTitle("Editar Perfil")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(.visible, for: .navigationBar)
+                .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            }
+        
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct EditarPerfilView_Previews: PreviewProvider {
+    
+    static let authenticationManager = AuthenticationManager()
+    
+    @State static var isModalPresented = false
+    
     static var previews: some View {
         Group {
-            NavigationStack {
-                EditarPerfilView()
-            }
-            NavigationStack {
-                EditarPerfilView().preferredColorScheme(.dark)
-            }
+            EditarPerfilView().environmentObject({ () -> AuthenticationManager in
+                let envObj = AuthenticationManager()
+                envObj.login()
+                return envObj
+            }())
+            
+            EditarPerfilView().environmentObject({ () -> AuthenticationManager in
+                let envObj = AuthenticationManager()
+                envObj.login()
+                return envObj
+            }()).preferredColorScheme(.dark)
         }
     }
 }

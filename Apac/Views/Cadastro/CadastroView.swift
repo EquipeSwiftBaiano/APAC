@@ -29,6 +29,7 @@ struct CadastroView: View {
                 Text("Adicionar Foto")
             }
             .padding(.top)
+            
             Spacer()
             
             List {

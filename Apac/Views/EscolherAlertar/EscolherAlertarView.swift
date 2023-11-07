@@ -17,11 +17,16 @@ struct EscolherAlertarView: View {
     
     
     var body: some View {
+        
+        let parentes = authenticationManager.user.parentes
+        
+        let vizinhos = authenticationManager.user.vizinhos
+        
         NavigationView {
             VStack(spacing: 8) {
                 
                 List(selection: $selectedUserIDs) {
-                    if let parentes = authenticationManager.user?.parentes, !parentes.isEmpty {
+                    if !parentes.isEmpty {
                         Section(header: Text("Parentes")) {
                             ForEach(parentes) { parente in
                                 EscolherAlertaListRow(usuario: parente, isSelected: selectedUserIDs.contains(parente.id))
@@ -29,7 +34,7 @@ struct EscolherAlertarView: View {
                         }
                     }
                     
-                    if let vizinhos = authenticationManager.user?.vizinhos, !vizinhos.isEmpty {
+                    if !vizinhos.isEmpty {
                         Section(header: Text("Vizinhos")) {
                             ForEach(vizinhos) { vizinho in
                                 EscolherAlertaListRow(usuario: vizinho, isSelected: selectedUserIDs.contains(vizinho.id))
@@ -51,13 +56,13 @@ struct EscolherAlertarView: View {
                 }
                 .foregroundColor(.red)
                 .frame(maxWidth: .infinity, maxHeight: 50)
-                .background(Color(uiColor: .secondarySystemBackground))
+                .background(Color(uiColor: .tertiarySystemBackground))
                 .cornerRadius(10)
                 .padding(.horizontal, 18)
                 Spacer()
                 
             }
-            .background(Color(uiColor: .tertiarySystemBackground))
+            .background(Color(uiColor: .secondarySystemBackground))
             
             
             .navigationTitle("Selecionar pessoas")

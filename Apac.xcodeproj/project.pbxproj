@@ -10,12 +10,13 @@
 		CE070D432AF07A2B007AEF88 /* TabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D422AF07A2B007AEF88 /* TabsEnum.swift */; };
 		CE070D462AF08E6E007AEF88 /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D452AF08E6E007AEF88 /* PrincipalView.swift */; };
 		CE070D492AF09A9B007AEF88 /* EscolherAlertarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D482AF09A9B007AEF88 /* EscolherAlertarView.swift */; };
-		CE070D4B2AF479FB007AEF88 /* EditarPerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D4A2AF479FB007AEF88 /* EditarPerfilView.swift */; };
 		CE070D4D2AF56672007AEF88 /* ConexoesListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */; };
-		CEA3E15C2AF5E56B00263EBA /* EditarPerfilListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E15B2AF5E56B00263EBA /* EditarPerfilListRow.swift */; };
 		CEA3E1602AF5F76500263EBA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E15F2AF5F76500263EBA /* ViewExtension.swift */; };
 		CEA3E1622AF6023900263EBA /* PerfilEnderecoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1612AF6023900263EBA /* PerfilEnderecoListRow.swift */; };
 		CEA3E1642AF6046A00263EBA /* PerfilMapeamentoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1632AF6046A00263EBA /* PerfilMapeamentoListRow.swift */; };
+		CEA3E1662AF9AB5E00263EBA /* EditarPerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1652AF9AB5E00263EBA /* EditarPerfilView.swift */; };
+		CEA3E1692AF9CC7A00263EBA /* ConfiguracoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1682AF9CC7A00263EBA /* ConfiguracoesView.swift */; };
+		CEA3E16B2AF9CCDD00263EBA /* EditarPerfilListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E16A2AF9CCDD00263EBA /* EditarPerfilListRow.swift */; };
 		CEA6C1A72AF15FAB00BF0AA0 /* TelefoneUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1A62AF15FAB00BF0AA0 /* TelefoneUtil.swift */; };
 		CEA6C1A92AF19A1E00BF0AA0 /* CadastroListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1A82AF19A1E00BF0AA0 /* CadastroListRow.swift */; };
 		CEA6C1AB2AF19CD300BF0AA0 /* PrincipalTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1AA2AF19CD300BF0AA0 /* PrincipalTabItem.swift */; };
@@ -52,12 +53,13 @@
 		CE070D422AF07A2B007AEF88 /* TabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsEnum.swift; sourceTree = "<group>"; };
 		CE070D452AF08E6E007AEF88 /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
 		CE070D482AF09A9B007AEF88 /* EscolherAlertarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherAlertarView.swift; sourceTree = "<group>"; };
-		CE070D4A2AF479FB007AEF88 /* EditarPerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilView.swift; sourceTree = "<group>"; };
 		CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConexoesListRow.swift; sourceTree = "<group>"; };
-		CEA3E15B2AF5E56B00263EBA /* EditarPerfilListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilListRow.swift; sourceTree = "<group>"; };
 		CEA3E15F2AF5F76500263EBA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		CEA3E1612AF6023900263EBA /* PerfilEnderecoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilEnderecoListRow.swift; sourceTree = "<group>"; };
 		CEA3E1632AF6046A00263EBA /* PerfilMapeamentoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilMapeamentoListRow.swift; sourceTree = "<group>"; };
+		CEA3E1652AF9AB5E00263EBA /* EditarPerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilView.swift; sourceTree = "<group>"; };
+		CEA3E1682AF9CC7A00263EBA /* ConfiguracoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesView.swift; sourceTree = "<group>"; };
+		CEA3E16A2AF9CCDD00263EBA /* EditarPerfilListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilListRow.swift; sourceTree = "<group>"; };
 		CEA6C1A62AF15FAB00BF0AA0 /* TelefoneUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefoneUtil.swift; sourceTree = "<group>"; };
 		CEA6C1A82AF19A1E00BF0AA0 /* CadastroListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroListRow.swift; sourceTree = "<group>"; };
 		CEA6C1AA2AF19CD300BF0AA0 /* PrincipalTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabItem.swift; sourceTree = "<group>"; };
@@ -155,10 +157,18 @@
 		CEA3E15A2AF5E2D700263EBA /* EditarPerfil */ = {
 			isa = PBXGroup;
 			children = (
-				CE070D4A2AF479FB007AEF88 /* EditarPerfilView.swift */,
-				CEA3E15B2AF5E56B00263EBA /* EditarPerfilListRow.swift */,
+				CEA3E1652AF9AB5E00263EBA /* EditarPerfilView.swift */,
+				CEA3E16A2AF9CCDD00263EBA /* EditarPerfilListRow.swift */,
 			);
 			path = EditarPerfil;
+			sourceTree = "<group>";
+		};
+		CEA3E1672AF9CC5C00263EBA /* Configuracoes */ = {
+			isa = PBXGroup;
+			children = (
+				CEA3E1682AF9CC7A00263EBA /* ConfiguracoesView.swift */,
+			);
+			path = Configuracoes;
 			sourceTree = "<group>";
 		};
 		CEA6C1B82AF284C700BF0AA0 /* Cards */ = {
@@ -214,10 +224,11 @@
 		CEF3ED8B2AEF10D2006E1F03 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEA3E1672AF9CC5C00263EBA /* Configuracoes */,
+				CEF3EDAC2AEF1D47006E1F03 /* Perfil */,
 				CE070D472AF09A52007AEF88 /* EscolherAlertar */,
 				CE070D442AF08E34007AEF88 /* Principal */,
 				CEF3EDAF2AEF3BB5006E1F03 /* Shared */,
-				CEF3EDAC2AEF1D47006E1F03 /* Perfil */,
 				CEA3E15A2AF5E2D700263EBA /* EditarPerfil */,
 				CEF3EDA92AEF1D0F006E1F03 /* TelefonesUteis */,
 				CEF3EDA42AEF1C8F006E1F03 /* Conexoes */,
@@ -401,11 +412,13 @@
 				CEF3ED9D2AEF1781006E1F03 /* CadastroView.swift in Sources */,
 				CEF3EDA82AEF1D06006E1F03 /* ConexoesViewModel.swift in Sources */,
 				CEA6C1A72AF15FAB00BF0AA0 /* TelefoneUtil.swift in Sources */,
+				CEA3E1662AF9AB5E00263EBA /* EditarPerfilView.swift in Sources */,
 				CE070D462AF08E6E007AEF88 /* PrincipalView.swift in Sources */,
 				CE070D432AF07A2B007AEF88 /* TabsEnum.swift in Sources */,
 				CEA3E1642AF6046A00263EBA /* PerfilMapeamentoListRow.swift in Sources */,
 				CEA3E1622AF6023900263EBA /* PerfilEnderecoListRow.swift in Sources */,
 				CEF3ED942AEF12E0006E1F03 /* AuthenticationProtocol.swift in Sources */,
+				CEA3E16B2AF9CCDD00263EBA /* EditarPerfilListRow.swift in Sources */,
 				CEF3EDA62AEF1CE7006E1F03 /* ConexoesView.swift in Sources */,
 				CEA6C1B72AF283D500BF0AA0 /* Dicas.swift in Sources */,
 				CEA6C1AF2AF1ABF200BF0AA0 /* CardIndice.swift in Sources */,
@@ -422,13 +435,12 @@
 				CEA6C1AB2AF19CD300BF0AA0 /* PrincipalTabItem.swift in Sources */,
 				CEF3ED802AEF107D006E1F03 /* ContentView.swift in Sources */,
 				CEF3EDAB2AEF1D2F006E1F03 /* TelefonesUteisView.swift in Sources */,
-				CE070D4B2AF479FB007AEF88 /* EditarPerfilView.swift in Sources */,
 				CE070D492AF09A9B007AEF88 /* EscolherAlertarView.swift in Sources */,
+				CEA3E1692AF9CC7A00263EBA /* ConfiguracoesView.swift in Sources */,
 				CEF3ED962AEF16E5006E1F03 /* LoginView.swift in Sources */,
 				CEA6C1B32AF1D73000BF0AA0 /* CardDicas.swift in Sources */,
 				CEA6C1AD2AF1A9B300BF0AA0 /* CardTemperatura.swift in Sources */,
 				CEF3ED7E2AEF107D006E1F03 /* ApacApp.swift in Sources */,
-				CEA3E15C2AF5E56B00263EBA /* EditarPerfilListRow.swift in Sources */,
 				CEF3ED9F2AEF1797006E1F03 /* CadastroViewModel.swift in Sources */,
 				CEF3ED9B2AEF171F006E1F03 /* Usuario.swift in Sources */,
 			);

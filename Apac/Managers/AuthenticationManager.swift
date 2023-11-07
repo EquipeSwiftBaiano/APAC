@@ -12,11 +12,17 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
     
     @Published var _isAuthenticated: Bool
     
-    @Published private var _user: Usuario? = nil
+    @Published private var _user: Usuario
+    
+    init() {
+        self._user = Usuario()
+        self._isAuthenticated = false
+    }
     
     init(isAuthenticated: Bool = false) {
+        self._user = Usuario()
         self._isAuthenticated = isAuthenticated
-    }    
+    }
     
     var isAuthenticated: Bool {
         get {
@@ -24,7 +30,7 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
         }
     }
     
-    var user: Usuario? {
+    var user: Usuario {
         get {
             return self._user
         }
@@ -42,11 +48,9 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
             imageUrl: "person.circle"
         )
         
-        guard self._user != nil else { return }
+        addParentes(&self._user)
         
-        addParentes(&self._user!)
-        
-        addVizinhos(&self._user!)
+        addVizinhos(&self._user)
         /*
         print("User: ")
         print(user)
@@ -55,6 +59,11 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
         print(self._user!)
         */
         self._isAuthenticated = true
+    }
+    
+    func logout() {
+        self._isAuthenticated = false
+        self._user = Usuario()
     }
     
     func cadastrar() {

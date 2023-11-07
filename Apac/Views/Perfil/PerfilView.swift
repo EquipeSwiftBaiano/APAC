@@ -11,82 +11,95 @@ struct PerfilView: View {
     
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
-    @State private var isModalPresented = false
+    @State private var isEditPerfilShow = false
+    
+    @State private var isConfigPerfilShow = false
     
     var body: some View {
-        if let usuario: Usuario = authenticationManager.user {
+        
+        let usuario: Usuario = authenticationManager.user
+        
+        NavigationStack {
             
-            NavigationStack {
+            VStack {
+                Spacer(minLength: 1)
                 
-                VStack {
-                    Spacer(minLength: 1)
-                    
-                    List {
-                        HStack {
-                            Image(systemName: usuario.imageUrl)
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .aspectRatio(contentMode: .fit)
+                List {
+                    HStack {
+                        Image(systemName: usuario.imageUrl)
+                            .resizable()
+                            .frame(width: 64, height: 64)
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color(uiColor: .label))
+                        
+                        VStack(alignment: .leading) {
+                            Text(usuario.nome)
+                                .font(.headline)
                                 .foregroundColor(Color(uiColor: .label))
-                            
-                            VStack(alignment: .leading) {
-                                Text("Nome")
-                                    
-                                Text("Email")
                                 
-                                Text("Telefone")
-                            }
-                            .padding(.leading, 10)
-                            Spacer()
-                            Button("Editar") {
-                                self.isModalPresented = true
-                            }
+                            Text(usuario.email)
+                                .font(.caption)
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                            
+                            Text(usuario.numero)
+                                .font(.caption)
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
                         }
+                        .padding(.leading, 10)
                         
-                        Section(header: Text("Informações Mapeamento")) {
-                            PerfilMapeamentoListRow(label: "Tipo de Risco", value: 1)
-                            PerfilMapeamentoListRow(label: "Tipo de Risco", value: 2)
-                            PerfilMapeamentoListRow(label: "Alerta de risco atual", value: 3)
-                            
-                        }
+                        Spacer()
                         
-                        Section(header: Text("Informações Endereço")) {
-                            PerfilEnderecoListRow(label: "Endereco", value: usuario.nome)
-                            
-                            PerfilEnderecoListRow(label: "Bairro", value: usuario.nome)
-                            
-                            PerfilEnderecoListRow(label: "CEP", value: usuario.nome)
-                            
-                            PerfilEnderecoListRow(label: "Cidade", value: usuario.nome)
-                            
-                            PerfilEnderecoListRow(label: "Estado", value: usuario.nome)
+                        Button("Editar") {
+                            self.isEditPerfilShow.toggle()
                         }
+                        .padding(10)
+                        .buttonStyle(.borderless)
                     }
-                    .listStyle(.insetGrouped)
-                    .scrollContentBackground(.hidden)
+                    .listRowBackground(Color(uiColor: .tertiarySystemBackground))
+                    
+                    Section(header: Text("Informações Mapeamento")) {
+                        PerfilMapeamentoListRow(label: "Tipo de Risco", value: 1)
+                        PerfilMapeamentoListRow(label: "Tipo de Risco", value: 2)
+                        PerfilMapeamentoListRow(label: "Alerta de risco atual", value: 3)
+                        
+                    }
+                    
+                    Section(header: Text("Informações Endereço")) {
+                        PerfilEnderecoListRow(label: "Endereco", value: usuario.nome)
+                        
+                        PerfilEnderecoListRow(label: "Bairro", value: usuario.nome)
+                        
+                        PerfilEnderecoListRow(label: "CEP", value: usuario.nome)
+                        
+                        PerfilEnderecoListRow(label: "Cidade", value: usuario.nome)
+                        
+                        PerfilEnderecoListRow(label: "Estado", value: usuario.nome)
+                    }
                 }
-                
-                
-                .navigationTitle("Perfil")
-                .background(Color(uiColor: .secondarySystemBackground))
-                .toolbarBackground(.visible, for: .navigationBar)
-                .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
-                
-                .sheet(isPresented: $isModalPresented, content: {
-                    EditarPerfilView()
-                })
-                
-                .toolbar {
-                    Button(action: {
-                        self.isModalPresented.toggle()
-                    }, label: {
-                        Image(systemName: "gearshape")
-                    })
-                }
+                .listStyle(.insetGrouped)
+                .scrollContentBackground(.hidden)
             }
             
-        } else {
             
+            .navigationTitle("Perfil")
+            .background(Color(uiColor: .secondarySystemBackground))
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            
+            .sheet(isPresented: $isEditPerfilShow, content: {
+                EditarPerfilView()
+            })
+            .sheet(isPresented: $isConfigPerfilShow, content: {
+                ConfiguracoesView()
+            })
+            
+            .toolbar {
+                Button(action: {
+                    self.isConfigPerfilShow.toggle()
+                }, label: {
+                    Image(systemName: "gearshape")
+                })
+            }
         }
         
     }
