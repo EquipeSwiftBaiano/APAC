@@ -13,7 +13,7 @@
 		CE070D4D2AF56672007AEF88 /* ConexoesListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */; };
 		CEA3E1602AF5F76500263EBA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E15F2AF5F76500263EBA /* ViewExtension.swift */; };
 		CEA3E1622AF6023900263EBA /* PerfilEnderecoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1612AF6023900263EBA /* PerfilEnderecoListRow.swift */; };
-		CEA3E1642AF6046A00263EBA /* PerfilMapeamentoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1632AF6046A00263EBA /* PerfilMapeamentoListRow.swift */; };
+		CEA3E1642AF6046A00263EBA /* InformacaoMapeamentoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1632AF6046A00263EBA /* InformacaoMapeamentoListRow.swift */; };
 		CEA3E1662AF9AB5E00263EBA /* EditarPerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1652AF9AB5E00263EBA /* EditarPerfilView.swift */; };
 		CEA3E1692AF9CC7A00263EBA /* ConfiguracoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E1682AF9CC7A00263EBA /* ConfiguracoesView.swift */; };
 		CEA3E16B2AF9CCDD00263EBA /* EditarPerfilListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3E16A2AF9CCDD00263EBA /* EditarPerfilListRow.swift */; };
@@ -28,6 +28,8 @@
 		CEA6C1B72AF283D500BF0AA0 /* Dicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B62AF283D500BF0AA0 /* Dicas.swift */; };
 		CEA6C1BA2AF284FC00BF0AA0 /* PrevisaoTemperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1B92AF284FC00BF0AA0 /* PrevisaoTemperatura.swift */; };
 		CEA6C1BC2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1BB2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift */; };
+		CEB5C68E2AFC0F4400577B10 /* AdicionarConexaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C68D2AFC0F4400577B10 /* AdicionarConexaoView.swift */; };
+		CEB5C6902AFC258E00577B10 /* LabelInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C68F2AFC258E00577B10 /* LabelInputField.swift */; };
 		CEF3ED7E2AEF107D006E1F03 /* ApacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */; };
 		CEF3ED802AEF107D006E1F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */; };
 		CEF3ED822AEF107E006E1F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3ED812AEF107E006E1F03 /* Assets.xcassets */; };
@@ -56,7 +58,7 @@
 		CE070D4C2AF56672007AEF88 /* ConexoesListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConexoesListRow.swift; sourceTree = "<group>"; };
 		CEA3E15F2AF5F76500263EBA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		CEA3E1612AF6023900263EBA /* PerfilEnderecoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilEnderecoListRow.swift; sourceTree = "<group>"; };
-		CEA3E1632AF6046A00263EBA /* PerfilMapeamentoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilMapeamentoListRow.swift; sourceTree = "<group>"; };
+		CEA3E1632AF6046A00263EBA /* InformacaoMapeamentoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoMapeamentoListRow.swift; sourceTree = "<group>"; };
 		CEA3E1652AF9AB5E00263EBA /* EditarPerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilView.swift; sourceTree = "<group>"; };
 		CEA3E1682AF9CC7A00263EBA /* ConfiguracoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesView.swift; sourceTree = "<group>"; };
 		CEA3E16A2AF9CCDD00263EBA /* EditarPerfilListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilListRow.swift; sourceTree = "<group>"; };
@@ -71,6 +73,8 @@
 		CEA6C1B62AF283D500BF0AA0 /* Dicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dicas.swift; sourceTree = "<group>"; };
 		CEA6C1B92AF284FC00BF0AA0 /* PrevisaoTemperatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevisaoTemperatura.swift; sourceTree = "<group>"; };
 		CEA6C1BB2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherAlertaListRow.swift; sourceTree = "<group>"; };
+		CEB5C68D2AFC0F4400577B10 /* AdicionarConexaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarConexaoView.swift; sourceTree = "<group>"; };
+		CEB5C68F2AFC258E00577B10 /* LabelInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInputField.swift; sourceTree = "<group>"; };
 		CEF3ED7A2AEF107D006E1F03 /* apac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApacApp.swift; sourceTree = "<group>"; };
 		CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		CEA3E1582AF5DE7400263EBA /* InformacaoMapeamento */ = {
 			isa = PBXGroup;
 			children = (
+				CEA3E1632AF6046A00263EBA /* InformacaoMapeamentoListRow.swift */,
 			);
 			path = InformacaoMapeamento;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			children = (
 				CEF3EDB22AEF3C11006E1F03 /* TextInputField.swift */,
 				CEF3EDB42AEF4380006E1F03 /* SecureInputField.swift */,
+				CEB5C68F2AFC258E00577B10 /* LabelInputField.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -180,6 +186,14 @@
 				CEA6C1B22AF1D73000BF0AA0 /* CardDicas.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		CEB5C68C2AFC0F2D00577B10 /* AdicionarConexao */ = {
+			isa = PBXGroup;
+			children = (
+				CEB5C68D2AFC0F4400577B10 /* AdicionarConexaoView.swift */,
+			);
+			path = AdicionarConexao;
 			sourceTree = "<group>";
 		};
 		CEF3ED712AEF107D006E1F03 = {
@@ -224,16 +238,17 @@
 		CEF3ED8B2AEF10D2006E1F03 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEF3EDAF2AEF3BB5006E1F03 /* Shared */,
 				CEA3E1672AF9CC5C00263EBA /* Configuracoes */,
+				CEA3E15A2AF5E2D700263EBA /* EditarPerfil */,
 				CEF3EDAC2AEF1D47006E1F03 /* Perfil */,
 				CE070D472AF09A52007AEF88 /* EscolherAlertar */,
-				CE070D442AF08E34007AEF88 /* Principal */,
-				CEF3EDAF2AEF3BB5006E1F03 /* Shared */,
-				CEA3E15A2AF5E2D700263EBA /* EditarPerfil */,
 				CEF3EDA92AEF1D0F006E1F03 /* TelefonesUteis */,
+				CEB5C68C2AFC0F2D00577B10 /* AdicionarConexao */,
 				CEF3EDA42AEF1C8F006E1F03 /* Conexoes */,
-				CEF3ED8F2AEF111B006E1F03 /* Cadastro */,
 				CEF3ED8E2AEF1112006E1F03 /* Home */,
+				CE070D442AF08E34007AEF88 /* Principal */,
+				CEF3ED8F2AEF111B006E1F03 /* Cadastro */,
 				CEF3ED8D2AEF1109006E1F03 /* Login */,
 				CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */,
 			);
@@ -318,9 +333,8 @@
 		CEF3EDAC2AEF1D47006E1F03 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
-				CEF3EDAD2AEF1D5C006E1F03 /* PerfilView.swift */,
 				CEA3E1612AF6023900263EBA /* PerfilEnderecoListRow.swift */,
-				CEA3E1632AF6046A00263EBA /* PerfilMapeamentoListRow.swift */,
+				CEF3EDAD2AEF1D5C006E1F03 /* PerfilView.swift */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -411,11 +425,12 @@
 				CEF3EDA32AEF17D1006E1F03 /* HomeViewModel.swift in Sources */,
 				CEF3ED9D2AEF1781006E1F03 /* CadastroView.swift in Sources */,
 				CEF3EDA82AEF1D06006E1F03 /* ConexoesViewModel.swift in Sources */,
+				CEB5C68E2AFC0F4400577B10 /* AdicionarConexaoView.swift in Sources */,
 				CEA6C1A72AF15FAB00BF0AA0 /* TelefoneUtil.swift in Sources */,
 				CEA3E1662AF9AB5E00263EBA /* EditarPerfilView.swift in Sources */,
 				CE070D462AF08E6E007AEF88 /* PrincipalView.swift in Sources */,
 				CE070D432AF07A2B007AEF88 /* TabsEnum.swift in Sources */,
-				CEA3E1642AF6046A00263EBA /* PerfilMapeamentoListRow.swift in Sources */,
+				CEA3E1642AF6046A00263EBA /* InformacaoMapeamentoListRow.swift in Sources */,
 				CEA3E1622AF6023900263EBA /* PerfilEnderecoListRow.swift in Sources */,
 				CEF3ED942AEF12E0006E1F03 /* AuthenticationProtocol.swift in Sources */,
 				CEA3E16B2AF9CCDD00263EBA /* EditarPerfilListRow.swift in Sources */,
@@ -424,6 +439,7 @@
 				CEA6C1AF2AF1ABF200BF0AA0 /* CardIndice.swift in Sources */,
 				CEA6C1B52AF1F0AA00BF0AA0 /* Indices.swift in Sources */,
 				CEA6C1B12AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift in Sources */,
+				CEB5C6902AFC258E00577B10 /* LabelInputField.swift in Sources */,
 				CEF3EDA12AEF17B0006E1F03 /* HomeView.swift in Sources */,
 				CEA6C1BC2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift in Sources */,
 				CE070D4D2AF56672007AEF88 /* ConexoesListRow.swift in Sources */,
@@ -578,6 +594,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,6 +623,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

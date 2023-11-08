@@ -28,8 +28,8 @@ struct PerfilView: View {
                     HStack {
                         Image(systemName: usuario.imageUrl)
                             .resizable()
-                            .frame(width: 64, height: 64)
                             .aspectRatio(contentMode: .fit)
+                            .frame(width: 64, height: 64)
                             .foregroundColor(Color(uiColor: .label))
                         
                         VStack(alignment: .leading) {
@@ -58,9 +58,9 @@ struct PerfilView: View {
                     .listRowBackground(Color(uiColor: .tertiarySystemBackground))
                     
                     Section(header: Text("Informações Mapeamento")) {
-                        PerfilMapeamentoListRow(label: "Tipo de Risco", value: 1)
-                        PerfilMapeamentoListRow(label: "Tipo de Risco", value: 2)
-                        PerfilMapeamentoListRow(label: "Alerta de risco atual", value: 3)
+                        InformacaoMapeamentoListRow(label: "Tipo de Risco", value: 1)
+                        InformacaoMapeamentoListRow(label: "Tipo de Risco", value: 2)
+                        InformacaoMapeamentoListRow(label: "Alerta de risco atual", value: 3)
                         
                     }
                     

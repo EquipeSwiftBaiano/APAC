@@ -17,8 +17,8 @@ struct EscolherAlertaListRow: View {
         HStack(spacing: 18) {
             Image(systemName: usuario.imageUrl)
                 .resizable()
-                .frame(width: 38, height: 38)
                 .aspectRatio(contentMode: .fit)
+                .frame(width: 38, height: 38)
                 .foregroundColor(Color(uiColor: .label))
             
             Text(usuario.nome)

@@ -14,8 +14,7 @@ struct PerfilEnderecoListRow: View {
     var value: String
     
     var body: some View {
-        TextInputField(placeHolder: label, value: .constant(value))
-            .disabled(true)
+        LabelInputField(placeHolder: label, value: value)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             .listRowBackground(Color(uiColor: .tertiarySystemBackground))
     }

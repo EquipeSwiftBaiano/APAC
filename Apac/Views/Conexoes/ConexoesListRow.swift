@@ -11,6 +11,10 @@ struct ConexoesListRow: View {
     
     let usuario: Usuario
     
+    var onDelete: (UUID, String) -> Void
+    
+    var onEdit: (UUID, String) -> Void
+    
     var body: some View {
         HStack(spacing: 18) {
             Image(systemName: usuario.imageUrl)
@@ -28,6 +32,7 @@ struct ConexoesListRow: View {
             Button(action: {
                 print("Deletar")
                 print(self.usuario)
+                onDelete(self.usuario.id, self.usuario.nome)
             }, label: {
                 Image(systemName: "trash.fill")
             })
@@ -36,6 +41,7 @@ struct ConexoesListRow: View {
             Button(action: {
                 print("Editar")
                 print(self.usuario)
+                onEdit(self.usuario.id, self.usuario.nome)
             }, label: {
                 Image(systemName: "pencil")
             })
@@ -49,9 +55,16 @@ struct ConexoesListRow_Previews: PreviewProvider {
     
     @State static var usuario = Usuario(id: UUID(), nome: "Fulano de Tal", email: "email@email.com", numero: "71988887777", imageUrl: "person.circle")
     
+    static func onDelete(id: UUID, nome: String) -> Void {
+        print("Deletar: \(id) | \(nome)")
+    }
+    static func onEdit(id: UUID, nome: String) -> Void {
+        print("Editar: \(id) | \(nome)")
+    }
+    
     static var previews: some View {
         List{
-            ConexoesListRow(usuario: usuario)
+            ConexoesListRow(usuario: usuario, onDelete: onDelete, onEdit: onEdit)
         }
     }
 }
