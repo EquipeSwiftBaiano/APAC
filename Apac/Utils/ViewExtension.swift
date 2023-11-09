@@ -1,0 +1,35 @@
+//
+//  ViewExtension.swift
+//  apac
+//
+//  Created by user on 04/11/23.
+//
+
+import Foundation
+import SwiftUI
+
+
+//https://stackoverflow.com/questions/71744888/swiftui-view-with-rounded-corners-and-border
+
+fileprivate struct ModifierCornerRadiusWithBorder: ViewModifier {
+    var radius: CGFloat
+    var borderLineWidth: CGFloat = 1
+    var borderColor: Color = .gray
+    var antialiased: Bool = true
+    
+    func body(content: Content) -> some View {
+        content
+            .cornerRadius(self.radius, antialiased: self.antialiased)
+            .overlay(
+                RoundedRectangle(cornerRadius: self.radius)
+                    .inset(by: self.borderLineWidth)
+                    .strokeBorder(self.borderColor, lineWidth: self.borderLineWidth, antialiased: self.antialiased)
+            )
+    }
+}
+
+extension View {
+    func cornerRadiusWithBorder(radius: CGFloat, borderLineWidth: CGFloat = 1, borderColor: Color = .gray, antialiased: Bool = true) -> some View {
+        modifier(ModifierCornerRadiusWithBorder(radius: radius, borderLineWidth: borderLineWidth, borderColor: borderColor, antialiased: antialiased))
+    }
+}
