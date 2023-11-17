@@ -110,18 +110,23 @@ struct AdicionarConexaoView: View {
                     
                     Spacer()
                     
-                    Button("Adicionar") {
+                    Button(action: {
                         self.isSheetPresented.toggle()
-                    }
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 18)
+                    }, label: {
+                        Text("Adicionar")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .padding(.horizontal, 18)
+                    })
                     
                 } else {
-                    List {}
-                        .scrollContentBackground(.hidden)
+                    List {
+                        Text("Nenhum usuario selecionado...")
+                            .listRowBackground(Color.clear)
+                    }
+                    .scrollContentBackground(.hidden)
                     
                 }
                 
@@ -141,24 +146,26 @@ struct AdicionarConexaoView: View {
             if !searchText.isEmpty, searchText.count > 2 {
                 
                 ForEach(searchResults, id: \.id) { result in
-                    
-                    Button(action: {
+                
+                    HStack(spacing: 18) {
+                        Image(systemName: result.imageUrl)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 38, height: 38)
+                            .foregroundColor(Color(uiColor: .label))
+                        
+                        Text(result.nome)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color(uiColor: .label))
+                        
+                        Spacer()
+                    }
+                    .contentShape(Rectangle())
+                    .searchCompletion(result.nome)
+                    .onTapGesture {
                         self._usuario = result
                         self.searchText = result.nome
-                    }, label: {
-                        HStack(spacing: 18) {
-                            Image(systemName: result.imageUrl)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 38, height: 38)
-                                .foregroundColor(Color(uiColor: .label))
-                            
-                            Text(result.nome)
-                                .font(.system(size: 16))
-                                .foregroundColor(Color(uiColor: .label))
-                        }
-                    })
-                    //.searchCompletion(result.nome)
+                    }
                 }
                 
             }

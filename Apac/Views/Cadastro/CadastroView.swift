@@ -69,14 +69,17 @@ struct CadastroView: View {
             
             Spacer()
             
-            Button("Cadastrar") {
-                authenticationManager.login()                
-            }
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity, maxHeight: 50)
-            .background(Color.blue)
-            .cornerRadius(10)
-            .padding(.horizontal, 18)
+                
+            Button(action: {
+                authenticationManager.login()
+            }, label: {
+                Text("Cadastrar")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, minHeight: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 18)
+            })
             
             Spacer()
         }

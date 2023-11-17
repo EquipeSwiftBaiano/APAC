@@ -51,14 +51,16 @@ struct ConfiguracoesView: View {
                 
                 Spacer()
                 
-                Button("Sair da conta") {
+                Button(action: {
                     authenticationManager.logout()
-                }
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, maxHeight: 50)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .padding(.horizontal, 18)
+                }, label: {
+                    Text("Sair da conta")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 18)
+                })
                 
                 Spacer()
             }

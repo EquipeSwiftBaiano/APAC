@@ -73,14 +73,16 @@ struct EditarPerfilView: View {
                     
                     Spacer()
                     
-                    Button("Salvar") {
+                    Button(action: {
                         print("Salvar informacoes")
-                    }
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 18)
+                    }, label: {
+                        Text("Salvar")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .padding(.horizontal, 18)
+                    })
                     
                     Spacer()
                 }

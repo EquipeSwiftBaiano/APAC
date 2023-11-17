@@ -60,19 +60,22 @@ struct LoginView: View {
                 
                 VStack(alignment: .center, spacing: 18) {
                     
-                    Button("Login") {
+                    Button(action: {
                         authenticationManager.login()
-                    }
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                    }, label: {
+                        Text("Login")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, minHeight: 50)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    })
                     
-
-                    NavigationLink("Cadastrar", destination: CadastroView())
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .background(.white)
-                        .cornerRadius(10)
+                    NavigationLink(destination: CadastroView(), label: {
+                            Text("Cadastrar")
+                                .frame(maxWidth: .infinity, minHeight: 50)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                    })
                 }
                 
                 Spacer()

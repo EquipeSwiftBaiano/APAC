@@ -44,21 +44,21 @@ struct EscolherAlertarView: View {
                 }
                 .listStyle(.insetGrouped)
                 .scrollContentBackground(.hidden)
-                .environment(\.editMode, .constant(.active))
-                
+                .environment(\.editMode, .constant(.active))                
                 
                 Spacer()
                 
-                Button("Alertar") {
+                Button(action: {
                     isSheetPresented.toggle()
-                    
-                    print(self.selectedUserIDs)
-                }
-                .foregroundColor(.red)
-                .frame(maxWidth: .infinity, maxHeight: 50)
-                .background(Color(uiColor: .tertiarySystemBackground))
-                .cornerRadius(10)
-                .padding(.horizontal, 18)
+                }, label: {
+                    Text("Alertar")
+                        .foregroundColor(.red)
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .background(Color(uiColor: .tertiarySystemBackground))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 18)
+                })
+                
                 Spacer()
                 
             }
