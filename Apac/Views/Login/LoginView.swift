@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
-    @State private var username = ""
-    @State private var password = ""
-    @State private var wrongUsername: Float = 0
-    @State private var wrongPassword: Float = 0    
+    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
+        
         NavigationStack {
             VStack {
                 Spacer()
@@ -35,21 +34,19 @@ struct LoginView: View {
                     
                     Text("Com o e-mail e senha para entra")
                     
-                    TextInputField(placeHolder: "Usuario", value: $username)
+                    TextInputField(placeHolder: "Usuario", value: $viewModel.username)
                         .frame(height: 52)
                         .background(Color(uiColor: .tertiarySystemBackground))
                         .cornerRadiusWithBorder(radius: 12, borderLineWidth: 1, borderColor: .gray)
-                        .disabled(true)
                     
-                    SecureInputField(placeHolder: "Senha", value: $password)
+                    SecureInputField(placeHolder: "Senha", value: $viewModel.password)
                         .background(Color(uiColor: .tertiarySystemBackground))
                         .cornerRadiusWithBorder(radius: 12, borderLineWidth: 1, borderColor: .gray)
                     
                     HStack {
                         Spacer()
                         Button("Esqueci minha senha") {
-                            authenticationManager.login()
-                            
+                            self.authenticationManager.login()                            
                         }
                         .font(.system(size: 13))
                     }
@@ -61,7 +58,7 @@ struct LoginView: View {
                 VStack(alignment: .center, spacing: 18) {
                     
                     Button(action: {
-                        authenticationManager.login()
+                        self.viewModel.login()
                     }, label: {
                         Text("Login")
                             .foregroundColor(.white)
@@ -91,6 +88,15 @@ struct LoginView: View {
             .navigationTitle("Login")
             .toolbar(.hidden)
         }
+        
+        .onAppear {
+            self.viewModel.setup(self.authenticationManager)
+        }
+        
+        .alert(isPresented: $viewModel.showError) {
+            Alert(title: Text("Atenção"), message: Text(self.viewModel.messageError), dismissButton: .default(Text("Ok")))
+        }
+        
     }
 }
 

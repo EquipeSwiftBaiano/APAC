@@ -18,6 +18,8 @@ struct PrincipalView: View {
     @State private var isModalPresented = false
     
     @State private var showAlert = false
+    
+    @State private var isAlertSucess = false
     	
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -52,11 +54,11 @@ struct PrincipalView: View {
         }
         
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Alerta emitido"), message: Text("Sub Titulo"), dismissButton: .default(Text("Ok")))
+            Alert(title: Text("Alerta emitido"), dismissButton: .default(Text("Ok")))
         }
         
         .actionSheet(isPresented: $showActionSheet) {
-            ActionSheet(title: Text("Ação de Exemplo"), buttons: [
+            ActionSheet(title: Text("Escolha a opção de alerta:"), buttons: [
                 .default(Text("Alertar parentes")) {
                     showAlert.toggle()
                 },
@@ -75,9 +77,14 @@ struct PrincipalView: View {
         }
         
         .sheet(isPresented: $isModalPresented, content: {
-            EscolherAlertarView(isSheetPresented: $isModalPresented)
+            EscolherAlertarView(isAlertSucess: $isAlertSucess)
                 .onDisappear {
-                    showAlert.toggle()
+                    print("isAlertSucess: \(isAlertSucess)")
+                    
+                    if isAlertSucess {
+                        showAlert.toggle()
+                    }
+                        
                     print("A view deixou de estar visível")
                 }
         })

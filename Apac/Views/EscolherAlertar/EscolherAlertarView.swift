@@ -11,9 +11,11 @@ struct EscolherAlertarView: View {
     
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var selectedUserIDs: Set<UUID> = []
     
-    @Binding var isSheetPresented: Bool
+    @Binding var isAlertSucess: Bool
     
     
     var body: some View {
@@ -49,7 +51,8 @@ struct EscolherAlertarView: View {
                 Spacer()
                 
                 Button(action: {
-                    isSheetPresented.toggle()
+                    self.isAlertSucess.toggle()
+                    self.dismiss()
                 }, label: {
                     Text("Alertar")
                         .foregroundColor(.red)
@@ -69,6 +72,17 @@ struct EscolherAlertarView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.isAlertSucess = false
+                        self.dismiss()
+                    }, label: {
+                        Text("Fechar")
+                    })
+                }
+            }
         }
     }
 }
@@ -77,17 +91,19 @@ struct EscolherAlertarView_Previews: PreviewProvider {
     
     static let authenticationManager = AuthenticationManager()
     
-    @State static var isModalPresented = false
+    @State static var isAlertSucess = false
     
     static var previews: some View {
         Group {
-            EscolherAlertarView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
+            EscolherAlertarView(isAlertSucess: $isAlertSucess)
+                .environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
                 envObj.login()
                 return envObj
             }())
             
-            EscolherAlertarView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
+            EscolherAlertarView(isAlertSucess: $isAlertSucess)
+                .environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
                 envObj.login()
                 return envObj

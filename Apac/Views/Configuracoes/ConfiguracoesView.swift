@@ -11,6 +11,8 @@ struct ConfiguracoesView: View {
     
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var isNotificacaoEnabled = false
     @State private var isSonoroEnabled = false
     @State private var isVibracaoEnabled = false
@@ -64,13 +66,23 @@ struct ConfiguracoesView: View {
                 
                 Spacer()
             }
-            .background(Color(uiColor: .secondarySystemBackground))
-            
+            .background(Color(uiColor: .secondarySystemBackground))            
             
             .navigationTitle("Configuração")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.dismiss()
+                    }, label: {
+                        Text("Fechar")
+                    })
+                }
+            }
+            
         }
             
     }

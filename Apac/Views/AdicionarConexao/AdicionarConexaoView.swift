@@ -17,6 +17,8 @@ struct AdicionarConexaoView: View {
     
     @Environment(\.dismissSearch) private var dismissSearch
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var selectedConnectionType = "Parente"
     
     @State private var searchText = ""
@@ -138,7 +140,18 @@ struct AdicionarConexaoView: View {
             .navigationTitle("Adicionar Conexão")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+            .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)            
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.dismiss()
+                    }, label: {
+                        Text("Fechar")
+                    })
+                }
+            }
+            
         }
         .background(Color(uiColor: .secondarySystemBackground))
         .searchable(text: $searchText, prompt: "Digite nome do usuario...")

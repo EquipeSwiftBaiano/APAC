@@ -11,6 +11,8 @@ struct EditarPerfilView: View {
     
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var nome = ""
     
     @State private var email = ""
@@ -86,13 +88,23 @@ struct EditarPerfilView: View {
                     
                     Spacer()
                 }
-                .background(Color(uiColor: .secondarySystemBackground))
-                
+                .background(Color(uiColor: .secondarySystemBackground))                
                 
                 .navigationTitle("Editar Perfil")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarBackground(Color(uiColor: .tertiarySystemBackground), for: .navigationBar)
+                
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            self.dismiss()
+                        }, label: {
+                            Text("Fechar")
+                        })
+                    }
+                }
+                
             }
         
     }

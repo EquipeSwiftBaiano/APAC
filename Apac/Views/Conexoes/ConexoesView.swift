@@ -69,11 +69,13 @@ struct ConexoesView: View {
             })
             
             .toolbar {
-                Button(action: {
-                    self.isAdicionarConexaoShow.toggle()
-                }, label: {
-                    Image(systemName: "person.fill.badge.plus")
-                })
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.isAdicionarConexaoShow.toggle()
+                    }, label: {
+                        Image(systemName: "person.fill.badge.plus")
+                    })
+                }
             }
         }
         
