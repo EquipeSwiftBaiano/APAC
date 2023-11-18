@@ -67,7 +67,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                     })
                     
-                    NavigationLink(destination: CadastroView(), label: {
+                    NavigationLink(destination: CadastroEtapasView(), label: {
                             Text("Cadastrar")
                                 .frame(maxWidth: .infinity, minHeight: 50)
                                 .background(Color.white)

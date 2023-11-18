@@ -16,7 +16,7 @@ class LoginViewModel: ObservableObject {
     
     @Published var messageError = ""
     
-    var authenticationManager: AuthenticationManager?
+    private var authenticationManager: AuthenticationManager?
     
     func setup(_ authenticationManager: AuthenticationManager) {
       self.authenticationManager = authenticationManager
@@ -24,7 +24,7 @@ class LoginViewModel: ObservableObject {
 
     func login() {
         
-        guard let authenticationManager = authenticationManager else {
+        guard let authenticationManager = self.authenticationManager else {
             return
         }
         
