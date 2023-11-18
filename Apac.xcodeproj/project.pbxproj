@@ -36,6 +36,7 @@
 		CEA6C1BC2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C1BB2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift */; };
 		CEB5C68E2AFC0F4400577B10 /* AdicionarConexaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C68D2AFC0F4400577B10 /* AdicionarConexaoView.swift */; };
 		CEB5C6902AFC258E00577B10 /* LabelInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C68F2AFC258E00577B10 /* LabelInputField.swift */; };
+		CED3A6EB2B08586F009B9EE2 /* TelefonesUteisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3A6EA2B08586F009B9EE2 /* TelefonesUteisViewModel.swift */; };
 		CEF3ED7E2AEF107D006E1F03 /* ApacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */; };
 		CEF3ED802AEF107D006E1F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */; };
 		CEF3ED822AEF107E006E1F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3ED812AEF107E006E1F03 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		CEA6C1BB2AF2BF6200BF0AA0 /* EscolherAlertaListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherAlertaListRow.swift; sourceTree = "<group>"; };
 		CEB5C68D2AFC0F4400577B10 /* AdicionarConexaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarConexaoView.swift; sourceTree = "<group>"; };
 		CEB5C68F2AFC258E00577B10 /* LabelInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInputField.swift; sourceTree = "<group>"; };
+		CED3A6EA2B08586F009B9EE2 /* TelefonesUteisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TelefonesUteisViewModel.swift; path = Apac/Views/TelefonesUteis/TelefonesUteisViewModel.swift; sourceTree = SOURCE_ROOT; };
 		CEF3ED7A2AEF107D006E1F03 /* apac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3ED7D2AEF107D006E1F03 /* ApacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApacApp.swift; sourceTree = "<group>"; };
 		CEF3ED7F2AEF107D006E1F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF3EDAA2AEF1D2F006E1F03 /* TelefonesUteisView.swift */,
+				CED3A6EA2B08586F009B9EE2 /* TelefonesUteisViewModel.swift */,
 			);
 			path = TelefonesUteis;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				CEA6C1B72AF283D500BF0AA0 /* Dicas.swift in Sources */,
 				CEA6C1AF2AF1ABF200BF0AA0 /* CardIndice.swift in Sources */,
 				CEA6C1B52AF1F0AA00BF0AA0 /* Indices.swift in Sources */,
+				CED3A6EB2B08586F009B9EE2 /* TelefonesUteisViewModel.swift in Sources */,
 				CEA6C1B12AF1C99E00BF0AA0 /* CardTemperaturaPrevisao.swift in Sources */,
 				CEB5C6902AFC258E00577B10 /* LabelInputField.swift in Sources */,
 				CEF3EDA12AEF17B0006E1F03 /* HomeView.swift in Sources */,

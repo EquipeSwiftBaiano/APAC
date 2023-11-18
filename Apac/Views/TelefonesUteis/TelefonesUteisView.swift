@@ -6,16 +6,11 @@
 //
 
 import SwiftUI
-import LinkPresentation
 
 
 struct TelefonesUteisView: View {
     
-    private let telefonesUteis: [TelefoneUtil] = [
-        TelefoneUtil(id: UUID(), nome: "Polícia", numero: "911"),
-        TelefoneUtil(id: UUID(), nome: "Bombeiros", numero: "193"),
-        TelefoneUtil(id: UUID(), nome: "Ambulância", numero: "192")
-    ]
+    @ObservedObject var viewModel: TelefonesUteisViewModel = TelefonesUteisViewModel()
     
     var body: some View {
         
@@ -23,7 +18,7 @@ struct TelefonesUteisView: View {
                 
             VStack {
                 Spacer(minLength: 1)
-                List(telefonesUteis, id: \.id) { telefone in
+                List(viewModel.telefonesUteis, id: \.id) { telefone in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(telefone.nome)
@@ -36,16 +31,7 @@ struct TelefonesUteisView: View {
                         }
                         Spacer()
                         Button(action: {
-                            print("Clicoupara chamar")
-                            if let phoneURL = URL(string: "tel://\(telefone.numero)") {
-                                if UIApplication.shared.canOpenURL(phoneURL) {
-                                    UIApplication.shared.open(phoneURL)
-                                } else {
-                                    print("Não é possível fazer chamadas neste dispositivo.")
-                                }
-                            } else {
-                                print("Número de telefone inválido.")
-                            }
+                            viewModel.ligar(telefone: telefone)
                         }, label: {
                             Image(systemName: "phone.and.waveform.fill")
                                 .resizable()
