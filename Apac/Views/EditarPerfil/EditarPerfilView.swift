@@ -120,13 +120,13 @@ struct EditarPerfilView_Previews: PreviewProvider {
         Group {
             EditarPerfilView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }())
             
             EditarPerfilView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }()).preferredColorScheme(.dark)
         }

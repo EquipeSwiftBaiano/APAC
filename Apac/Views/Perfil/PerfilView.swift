@@ -113,13 +113,13 @@ struct PerfilView_Previews: PreviewProvider {
         Group {
             PerfilView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }())
             
             PerfilView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }()).preferredColorScheme(.dark)
         }

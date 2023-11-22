@@ -203,13 +203,13 @@ struct AdicionarConexaoView_Previews: PreviewProvider {
         Group {
             AdicionarConexaoView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }())
             
             AdicionarConexaoView(isSheetPresented: $isModalPresented).environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }()).preferredColorScheme(.dark)
         }

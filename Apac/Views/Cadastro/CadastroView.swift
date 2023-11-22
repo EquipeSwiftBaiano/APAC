@@ -71,7 +71,7 @@ struct CadastroView: View {
             
                 
             Button(action: {
-                authenticationManager.login()
+                authenticationManager.loginMock()
             }, label: {
                 Text("Cadastrar")
                     .foregroundColor(.white)

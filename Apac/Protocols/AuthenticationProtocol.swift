@@ -8,5 +8,5 @@
 import Foundation
 
 protocol AuthenticationProtocol {
-    func login() -> Void
+    func login(_ email: String, _ password: String) async -> (isError: Bool, message: String)?
 }

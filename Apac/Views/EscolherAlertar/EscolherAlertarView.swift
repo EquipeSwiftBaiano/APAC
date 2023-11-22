@@ -98,14 +98,14 @@ struct EscolherAlertarView_Previews: PreviewProvider {
             EscolherAlertarView(isAlertSucess: $isAlertSucess)
                 .environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }())
             
             EscolherAlertarView(isAlertSucess: $isAlertSucess)
                 .environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }()).preferredColorScheme(.dark)
         }

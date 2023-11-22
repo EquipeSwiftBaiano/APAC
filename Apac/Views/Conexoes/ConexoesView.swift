@@ -105,13 +105,13 @@ struct ConexoesView_Previews: PreviewProvider {
         Group {
             ConexoesView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }())
             
             ConexoesView().environmentObject({ () -> AuthenticationManager in
                 let envObj = AuthenticationManager()
-                envObj.login()
+                envObj.loginMock()
                 return envObj
             }()).preferredColorScheme(.dark)
         }

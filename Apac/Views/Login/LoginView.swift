@@ -34,7 +34,7 @@ struct LoginView: View {
                     
                     Text("Com o e-mail e senha para entra")
                     
-                    TextInputField(placeHolder: "Usuario", value: $viewModel.username)
+                    TextInputField(placeHolder: "E-mail", value: $viewModel.email)
                         .frame(height: 52)
                         .background(Color(uiColor: .tertiarySystemBackground))
                         .cornerRadiusWithBorder(radius: 12, borderLineWidth: 1, borderColor: .gray)
@@ -46,7 +46,7 @@ struct LoginView: View {
                     HStack {
                         Spacer()
                         Button("Esqueci minha senha") {
-                            self.authenticationManager.login()                            
+                            self.authenticationManager.loginMock()                            
                         }
                         .font(.system(size: 13))
                     }
@@ -58,7 +58,9 @@ struct LoginView: View {
                 VStack(alignment: .center, spacing: 18) {
                     
                     Button(action: {
-                        self.viewModel.login()
+                        Task {                            
+                            await self.viewModel.login()
+                        }
                     }, label: {
                         Text("Login")
                             .foregroundColor(.white)

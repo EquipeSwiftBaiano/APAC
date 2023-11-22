@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 
 class AuthenticationManager: ObservableObject, AuthenticationProtocol {
     
-    @Published var _isAuthenticated: Bool
+    @Published private var _isAuthenticated: Bool
     
     @Published private var _user: Usuario
     
@@ -35,8 +36,24 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
             return self._user
         }
     }
+    
+    @MainActor
+    func login(_ email: String, _ password: String) async -> (isError: Bool, message: String)? {
+        
+        print("Login Username: \(email)")
+        print("Login Password: \(password)")
+        
+        do {
+            let authResultData = try await Auth.auth().signIn(withEmail: email, password: password)
+            self._isAuthenticated = true
+            return nil
+        } catch {
+            return (true, error.localizedDescription)
+        }
+    }
+    
 
-    func login() {
+    func loginMock() -> Void {
         
         let usuarioID = UUID()
         
@@ -58,6 +75,7 @@ class AuthenticationManager: ObservableObject, AuthenticationProtocol {
         print("Self User: ")
         print(self._user!)
         */
+        
         self._isAuthenticated = true
     }
     

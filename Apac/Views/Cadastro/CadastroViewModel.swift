@@ -67,7 +67,7 @@ class CadastroViewModel: ObservableObject {
         
         print(usuario)
         
-        authenticationManager.login()
+        authenticationManager.loginMock()
     }
     
     func setup(_ authenticationManager: AuthenticationManager) {

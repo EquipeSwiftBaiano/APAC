@@ -9,7 +9,7 @@ import Foundation
 
 class LoginViewModel: ObservableObject {
     
-    @Published var username = ""
+    @Published var email = ""
     @Published var password = ""
     
     @Published var showError = false
@@ -22,22 +22,30 @@ class LoginViewModel: ObservableObject {
       self.authenticationManager = authenticationManager
     }    
 
-    func login() {
+    @MainActor
+    func login() async {
         
         guard let authenticationManager = self.authenticationManager else {
             return
         }
         
-        guard !username.isEmpty, !password.isEmpty else {
+        guard !email.isEmpty, !password.isEmpty else {
             self.showError = true
             self.messageError = "Preencha os campos de Usuario e Senha."
             return
         }
         
-        print("Username: \(username)")
+        print("Email: \(email)")
         print("Password: \(password)")
+                
+        guard let result = await authenticationManager.login(self.email, self.password) else {
+            return
+        }
         
-        authenticationManager.login()
+        self.showError = result.isError
+        self.messageError = result.message
+        
+        
     }
     
 }
